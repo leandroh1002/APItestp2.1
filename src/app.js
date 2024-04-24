@@ -17,6 +17,6 @@ server.use((req, res, next) => {
  });
  
  server.use(express.json());
- server.use('/rickandmorty', router)
+ server.use('/persona', router)
 
  module.exports = {server};
