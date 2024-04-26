@@ -1,14 +1,13 @@
 const router = require ('express').Router();
-const getCharById = require ('../../ejemplos/getCharById');
+const getPersona = require ('../controllers/getPersona');
 const login = require ('../../ejemplos/login');
-const postUser = require ('../../ejemplos/postUser')
-const postFav = require ('../../ejemplos/postFav')
-const deleteFav = require ('../../ejemplos/deleteFav')
+const postPersona = require ('../controllers/postPersona')
+const updatePersona = require ('../controllers/updatePersona')
+const deletePersona = require ('../controllers/deletePersona')
 
-router.get('/character/:id',  getCharById)
-router.get('/login',  login)
-router.post('/login',  postUser)
-router.post('/fav',  postFav)
-router.delete('/fav/:id',  deleteFav)
+router.get('/all',  getPersona)
+router.post('/new',  postPersona)
+router.update('/modif',  updatePersona)
+router.delete('/pers/:id',  deletePersona)
 
 module.exports = router;
